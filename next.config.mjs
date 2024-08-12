@@ -1,5 +1,12 @@
 /** @type {import('next').NextConfig} */
 
-const nextConfig = {};
+const nextConfig = {
+
+    // doc page not found 
+    /* experimental: {
+        ppr: 'incremental',
+      }, */
+
+};
 
 export default nextConfig;
