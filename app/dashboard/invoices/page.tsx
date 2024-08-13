@@ -7,6 +7,25 @@ import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
 import { Suspense } from 'react';
 import { fetchInvoicesPages } from '@/app/lib/data';
 
+
+// Esto funciona, pero repetimos el título de la aplicación en cada página. Si algo cambia, 
+// como el nombre de la empresa, tendrás que actualizarlo en cada página.
+
+// En su lugar, puede utilizar el title.templatecampo en el metadataobjeto para definir una plantilla 
+// para los títulos de las páginas. Esta plantilla puede incluir el título de la página y cualquier 
+// otra información que desee incluir.
+
+import { Metadata } from 'next';
+
+/* export const metadata: Metadata = {
+  title: 'Invoices | Acme Dashboard',
+}; */
+
+// Debería ver que el título de la página ahora es Invoices | Acme Dashboard.
+export const metadata: Metadata = {
+    title: 'Invoices',
+};
+
 export default async function Page({
     searchParams,
 }: {
